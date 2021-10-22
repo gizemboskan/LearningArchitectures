@@ -9,12 +9,12 @@ import Foundation
 import Utility
 import MusicBoxAPI
 
-class ResourceLoader {
+public class ResourceLoader {
     
     enum MusicResource: String {
-        case music1
-        case music2
-        case music3
+        case Music1
+        case Music2
+        case Music3
     }
     
     static func loadMusic(resource: MusicResource) throws -> Music {

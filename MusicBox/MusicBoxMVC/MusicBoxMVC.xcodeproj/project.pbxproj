@@ -24,7 +24,6 @@
 		7A3AF8E92721E4A70057E80A /* MusicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8E62721E4A70057E80A /* MusicListView.swift */; };
 		7A3AF8EB2721EEEB0057E80A /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8EA2721EEEB0057E80A /* MusicListViewController.swift */; };
 		7A3AF8EC2721EEEB0057E80A /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8EA2721EEEB0057E80A /* MusicListViewController.swift */; };
-		7A3AF8ED2721EEEB0057E80A /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8EA2721EEEB0057E80A /* MusicListViewController.swift */; };
 		7A3AF8EF2721F0A00057E80A /* MusicBoxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3AF8C32721E16C0057E80A /* MusicBoxAPI.framework */; };
 		7A3AF8F02721F0A00057E80A /* MusicBoxAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3AF8C32721E16C0057E80A /* MusicBoxAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A3AF8F32721F1DD0057E80A /* MusicPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8F22721F1DD0057E80A /* MusicPresentation.swift */; };
@@ -83,6 +82,22 @@
 		7AFC30712722EB6300A8315F /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFC2F812722C4AB00A8315F /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AFC30732722EB8E00A8315F /* MusicBoxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3AF8C32721E16C0057E80A /* MusicBoxAPI.framework */; };
 		7AFC30742722EB8E00A8315F /* MusicBoxAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3AF8C32721E16C0057E80A /* MusicBoxAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AFC30752722F6C700A8315F /* MusicDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9082722A3490057E80A /* MusicDetailBuilder.swift */; };
+		7AFC30772722F74800A8315F /* MusicDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9082722A3490057E80A /* MusicDetailBuilder.swift */; };
+		7AFC30782722F74D00A8315F /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF8EA2721EEEB0057E80A /* MusicListViewController.swift */; };
+		7AFC30792722F77100A8315F /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90E2722A36F0057E80A /* MusicDetailViewController.swift */; };
+		7AFC307A2722F77200A8315F /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90E2722A36F0057E80A /* MusicDetailViewController.swift */; };
+		7AFC307B2722F79400A8315F /* MusicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90C2722A3640057E80A /* MusicDetailView.swift */; };
+		7AFC307C2722F79500A8315F /* MusicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90C2722A3640057E80A /* MusicDetailView.swift */; };
+		7AFC307D2722F79C00A8315F /* MusicDetailPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9102722A37B0057E80A /* MusicDetailPresentation.swift */; };
+		7AFC307E2722F79D00A8315F /* MusicDetailPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9102722A37B0057E80A /* MusicDetailPresentation.swift */; };
+		7AFC307F2722F7B300A8315F /* MusicDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90A2722A3560057E80A /* MusicDetailContracts.swift */; };
+		7AFC30802722F7B400A8315F /* MusicDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF90A2722A3560057E80A /* MusicDetailContracts.swift */; };
+		7AFC30822722FA4A00A8315F /* ResourcesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9182722BED00057E80A /* ResourcesLoader.swift */; };
+		7AFC30832722FA5000A8315F /* ResourcesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9182722BED00057E80A /* ResourcesLoader.swift */; };
+		7AFC30842722FA5100A8315F /* ResourcesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9182722BED00057E80A /* ResourcesLoader.swift */; };
+		7AFC30852722FA5100A8315F /* ResourcesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9182722BED00057E80A /* ResourcesLoader.swift */; };
+		7AFC30862722FA5200A8315F /* ResourcesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AF9182722BED00057E80A /* ResourcesLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -844,15 +859,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFC30752722F6C700A8315F /* MusicDetailBuilder.swift in Sources */,
 				7A3AF8EC2721EEEB0057E80A /* MusicListViewController.swift in Sources */,
 				7A3AF8E02721E3370057E80A /* MusicListContracts.swift in Sources */,
+				7AFC307D2722F79C00A8315F /* MusicDetailPresentation.swift in Sources */,
+				7AFC307F2722F7B300A8315F /* MusicDetailContracts.swift in Sources */,
 				7A3AF8802721E0D40057E80A /* MusicBoxMVCTests.swift in Sources */,
 				7A3AF8E82721E4A70057E80A /* MusicListView.swift in Sources */,
 				7A3AF8FC2721FF530057E80A /* AppRouter.swift in Sources */,
+				7AFC30792722F77100A8315F /* MusicDetailViewController.swift in Sources */,
 				7A3AF900272200B90057E80A /* MusicListBuilder.swift in Sources */,
 				7A3AF8F42721F1DD0057E80A /* MusicPresentation.swift in Sources */,
 				7A3AF8F82721FF2B0057E80A /* AppContainer.swift in Sources */,
+				7AFC30842722FA5100A8315F /* ResourcesLoader.swift in Sources */,
 				7AFC306C2722E8CC00A8315F /* MockMusicsService.swift in Sources */,
+				7AFC307B2722F79400A8315F /* MusicDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,15 +881,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3AF8ED2721EEEB0057E80A /* MusicListViewController.swift in Sources */,
 				7A3AF8E12721E3370057E80A /* MusicListContracts.swift in Sources */,
 				7A3AF88B2721E0D40057E80A /* MusicBoxMVCUITests.swift in Sources */,
 				7A3AF8E92721E4A70057E80A /* MusicListView.swift in Sources */,
+				7AFC307E2722F79D00A8315F /* MusicDetailPresentation.swift in Sources */,
+				7AFC30802722F7B400A8315F /* MusicDetailContracts.swift in Sources */,
+				7AFC30772722F74800A8315F /* MusicDetailBuilder.swift in Sources */,
 				7A3AF8FD2721FF530057E80A /* AppRouter.swift in Sources */,
 				7A3AF901272200B90057E80A /* MusicListBuilder.swift in Sources */,
+				7AFC307A2722F77200A8315F /* MusicDetailViewController.swift in Sources */,
+				7AFC30782722F74D00A8315F /* MusicListViewController.swift in Sources */,
 				7A3AF8F52721F1DD0057E80A /* MusicPresentation.swift in Sources */,
 				7A3AF8F92721FF2B0057E80A /* AppContainer.swift in Sources */,
+				7AFC30832722FA5000A8315F /* ResourcesLoader.swift in Sources */,
 				7AFC306D2722E8CC00A8315F /* MockMusicsService.swift in Sources */,
+				7AFC307C2722F79500A8315F /* MusicDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +905,7 @@
 			files = (
 				7AFC30602722DB0800A8315F /* MusicDetailBuilder.swift in Sources */,
 				7AFC30452722DA1600A8315F /* AppRouter.swift in Sources */,
+				7AFC30822722FA4A00A8315F /* ResourcesLoader.swift in Sources */,
 				7AFC306E2722E8CC00A8315F /* MockMusicsService.swift in Sources */,
 				7AFC305F2722DB0800A8315F /* MusicDetailPresentation.swift in Sources */,
 				7AFC30622722DB0800A8315F /* MusicListViewController.swift in Sources */,
@@ -900,6 +928,7 @@
 			files = (
 				7AFC30682722E5AA00A8315F /* MusicListViewModel.swift in Sources */,
 				7AFC302A2722D95900A8315F /* MusicBoxMVVMTests.swift in Sources */,
+				7AFC30852722FA5100A8315F /* ResourcesLoader.swift in Sources */,
 				7AFC306F2722E8CC00A8315F /* MockMusicsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,6 +937,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFC30862722FA5200A8315F /* ResourcesLoader.swift in Sources */,
 				7AFC30352722D95900A8315F /* MusicBoxMVVMUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

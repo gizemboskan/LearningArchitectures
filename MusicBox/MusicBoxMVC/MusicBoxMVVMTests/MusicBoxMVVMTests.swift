@@ -24,7 +24,6 @@ class MusicBoxMVVMTests: XCTestCase {
     
     func testExample() throws {
         // Given:
-//        let music1 = try ResourceLoader.loadMusic(resource: )
         
         // When:
         

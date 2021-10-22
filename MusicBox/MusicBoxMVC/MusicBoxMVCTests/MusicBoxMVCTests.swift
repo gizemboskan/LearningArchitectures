@@ -28,7 +28,7 @@ class MusicBoxMVCTests: XCTestCase {
     
     func testMusicList() {
         
-        let music1 = try! ResourceLoader.loadMusic(resource: .music1)
+        let music1 = try! ResourceLoader.loadMusic(resource: .Music1)
         service.musics = [music1]
         
         controller.loadViewIfNeeded()
