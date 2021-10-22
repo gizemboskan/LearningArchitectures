@@ -6,8 +6,8 @@
 //
 
 import XCTest
-@testable import MusicBoxMVC
 @testable import MusicBoxAPI
+@testable import MusicBoxMVC
 
 class MusicBoxMVCTests: XCTestCase {
     
@@ -28,20 +28,20 @@ class MusicBoxMVCTests: XCTestCase {
     
     func testMusicList() {
         
-        service.musics = []
+        let music1 = try! ResourceLoader.loadMusic(resource: .music1)
+        service.musics = [music1]
+        
+        controller.loadViewIfNeeded()
+        
+        XCTAssertEqual(view.isLoadingValues, [true, false])
+        XCTAssertEqual(view.musicList?.count, 1)
+        XCTAssertEqual( try view.musicList?.element(at: 0).title, music1.name)
+        
     }
     
 }
 
-private final class MockService: TopMusicsServiceProtocol {
-    
-    var musics: [Music] = []
-    func fetchTopMusics(completion: @escaping (Result<TopMusicsResponse>) -> Void) {
-        completion(.success(TopMusicsResponse(results: musics)))
-    }
-    
-    
-}
+
 
 private final class MockMusicListView: MusicListViewProtocol {
     

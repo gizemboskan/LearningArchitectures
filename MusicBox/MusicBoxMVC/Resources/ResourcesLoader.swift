@@ -17,7 +17,7 @@ class ResourceLoader {
         case music3
     }
     
-    static func loadMovie(resource: MusicResource) throws -> Music {
+    static func loadMusic(resource: MusicResource) throws -> Music {
         let bundle = Bundle.test
         let url = try bundle.url(forResource: resource.rawValue, withExtension: "json").unwrap()
         let data = try Data(contentsOf: url)
