@@ -49,7 +49,8 @@
 		7A3AF91B2722BEE50057E80A /* Music1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AF91A2722BEE50057E80A /* Music1.json */; };
 		7A3AF91D2722BEF10057E80A /* Music2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AF91C2722BEF10057E80A /* Music2.json */; };
 		7A3AF9212722BF240057E80A /* Music3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AF9202722BF240057E80A /* Music3.json */; };
-		7A3AF9512722C4070057E80A /* MusicBoxMVC in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AF9502722C4070057E80A /* MusicBoxMVC */; };
+		7AFC2F862722CE9D00A8315F /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFC2F812722C4AB00A8315F /* Utility.framework */; };
+		7AFC2F872722CE9D00A8315F /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFC2F812722C4AB00A8315F /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7A3AF8F02721F0A00057E80A /* MusicBoxAPI.framework in Embed Frameworks */,
+				7AFC2F872722CE9D00A8315F /* Utility.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +146,6 @@
 		7A3AF91C2722BEF10057E80A /* Music2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Music2.json; sourceTree = "<group>"; };
 		7A3AF9202722BF240057E80A /* Music3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Music3.json; sourceTree = "<group>"; };
 		7A3AF94D2722C1F00057E80A /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A3AF9502722C4070057E80A /* MusicBoxMVC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MusicBoxMVC; sourceTree = "<group>"; };
 		7AFC2F792722C4AB00A8315F /* Utility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Utility.xcodeproj; path = Resources/Utility/Utility.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -154,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3AF8EF2721F0A00057E80A /* MusicBoxAPI.framework in Frameworks */,
+				7AFC2F862722CE9D00A8315F /* Utility.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				7A3AF94D2722C1F00057E80A /* Utility.framework */,
-				7A3AF9502722C4070057E80A /* MusicBoxMVC */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -492,7 +493,6 @@
 				7A3AF8752721E0D40057E80A /* LaunchScreen.storyboard in Resources */,
 				7A3AF9132722A3860057E80A /* MusicDetail.storyboard in Resources */,
 				7A3AF91D2722BEF10057E80A /* Music2.json in Resources */,
-				7A3AF9512722C4070057E80A /* MusicBoxMVC in Resources */,
 				7A3AF9212722BF240057E80A /* Music3.json in Resources */,
 				7A3AF91B2722BEE50057E80A /* Music1.json in Resources */,
 				7A3AF8722721E0D40057E80A /* Assets.xcassets in Resources */,
