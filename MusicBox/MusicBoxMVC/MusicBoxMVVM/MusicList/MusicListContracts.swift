@@ -9,7 +9,7 @@ import Foundation
 
 protocol MusicListViewModelProtocol {
     func load()
-    func selectMoviePath(at index: Int)
+    func selectMusicPath(at index: Int)
     var delegate: MusicListViewModelDelegate? {get set}
     
 }
@@ -17,7 +17,7 @@ protocol MusicListViewModelProtocol {
 enum MusicListViewModelOutput: Equatable {
     case updateTitle(String)
     case setLoading(Bool)
-    case showMovieList([MusicPresentation])
+    case showMusicList([MusicPresentation])
 }
 
 protocol MusicListViewModelDelegate {

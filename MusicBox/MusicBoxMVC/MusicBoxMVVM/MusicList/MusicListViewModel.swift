@@ -19,24 +19,24 @@ final class MusicListViewModel: MusicListViewModelProtocol {
     }
     
     func load() {
-        notify(.updateTitle("Musics"))
-        notify(.setLoading(true))
-        
-        service.fetchTopMusics { [weak self] (result) in
-            guard let strongSelf = self else { return }
-            strongSelf.notify(.setLoading(false))
-            switch result {
-            case .success(let response):
-                let musics = response.results
-                let presentations = musics.map({ MusicPresentation(music: $0) })
-                strongSelf.notify(.showMovieList(presentations))
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        notify(.updateTitle("Musics"))
+//        notify(.setLoading(true))
+//        
+//        service.fetchTopMusics { [weak self] (result) in
+//            guard let strongSelf = self else { return }
+//            strongSelf.notify(.setLoading(false))
+//            switch result {
+//            case .success(let response):
+//                let musics = response.results
+//                let presentations = musics.map({ MusicPresentation(music: $0) })
+//                strongSelf.notify(.showMusicList(presentations))
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
-    func selectMoviePath(at index: Int) {
+    func selectMusicPath(at index: Int) {
         
     }
     

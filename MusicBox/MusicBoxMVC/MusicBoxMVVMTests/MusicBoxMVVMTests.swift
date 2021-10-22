@@ -22,12 +22,30 @@ class MusicBoxMVVMTests: XCTestCase {
         viewModel.delegate = view
     }
     
-    func testExample() throws {
+    func testLoad() throws {
         // Given:
+        let music1 = try ResourceLoader.loadMusic(resource: .Music1)
+        let music2 = try ResourceLoader.loadMusic(resource: .Music2)
+        service.musics = [music1, music2]
         
         // When:
+        viewModel.load()
         
         // Then:
+        XCTAssertEqual(view.outputs.count, 0)
+        
+        switch try view.outputs.element(at: 0) {
+        case .updateTitle(_):
+            break
+        default:
+            XCTFail("First ouput should be updateTitle.")
+        }
+        XCTAssertEqual(try view.outputs.element(at: 1), .setLoading(true))
+        XCTAssertEqual(try view.outputs.element(at: 2), .setLoading(false))
+        
+        let expectedMusics = [music1, music2].map { MusicPresentation(music: $0)}
+        XCTAssertEqual(try view.outputs.element(at: 3), .showMusicList(expectedMusics))
+        
     }
     
     
@@ -39,3 +57,4 @@ class MusicBoxMVVMTests: XCTestCase {
         }
     }
 }
+
