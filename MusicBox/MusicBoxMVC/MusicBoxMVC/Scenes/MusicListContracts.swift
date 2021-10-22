@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MusicListViewProtocol {
+@objc protocol MusicListViewProtocol: AnyObject {
     var delegate: MusicListViewDelegate? {get set}
     func updateMusicList(_ musicList: [MusicPresentation])
     func setLoading(_ isLoading: Bool)

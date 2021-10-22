@@ -10,7 +10,7 @@ import MusicBoxAPI
 
 final class MusicListViewController: UIViewController {
     
-    @IBOutlet weak var customView: MusicListView! {
+    @IBOutlet weak var customView: MusicListViewProtocol! {
         didSet {
             customView.delegate = self 
         }
@@ -45,6 +45,7 @@ final class MusicListViewController: UIViewController {
 extension MusicListViewController: MusicListViewDelegate {
     func didSelectMusic(at index: Int) {
         let music = musicList[index]
-        
+        let musicDetailViewController = MusicDetailBuilder.make(with: music)
+        show(musicDetailViewController, sender: nil)
     }
 }

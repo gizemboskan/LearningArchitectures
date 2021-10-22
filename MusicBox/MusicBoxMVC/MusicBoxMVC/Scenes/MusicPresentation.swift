@@ -8,15 +8,21 @@
 import Foundation
 import MusicBoxAPI
 
-struct MusicPresentation {
+final class MusicPresentation: NSObject {
     
     let title: String
     let detail: String
+    
+    init(title: String, detail: String){
+        self.title = title
+        self.detail = detail
+        super.init()
+    }
 }
 
 extension MusicPresentation {
     
-    init(music: Music) {
+    convenience init(music: Music) {
         self.init(title: music.name, detail: music.artistName)
     }
 }

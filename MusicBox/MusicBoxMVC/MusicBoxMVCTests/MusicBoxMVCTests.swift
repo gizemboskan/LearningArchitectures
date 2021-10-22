@@ -7,27 +7,55 @@
 
 import XCTest
 @testable import MusicBoxMVC
+@testable import MusicBoxAPI
 
 class MusicBoxMVCTests: XCTestCase {
-
+    
+    private var service: MockService!
+    private var view: MockMusicListView!
+    var controller: MusicListViewController!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        service = MockService()
+        view = MockMusicListView()
+        controller = MusicListViewController()
+        
+        controller.customView = view
+        controller.service = service
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testMusicList() {
+        
+        service.musics = []
     }
+    
+}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+private final class MockService: TopMusicsServiceProtocol {
+    
+    var musics: [Music] = []
+    func fetchTopMusics(completion: @escaping (Result<TopMusicsResponse>) -> Void) {
+        completion(.success(TopMusicsResponse(results: musics)))
     }
+    
+    
+}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+private final class MockMusicListView: MusicListViewProtocol {
+    
+    var delegate: MusicListViewDelegate?
+    var musicList: [MusicPresentation]?
+    var isLoadingValues: [Bool] = []
+    
+    func updateMusicList(_ musicList: [MusicPresentation]) {
+        self.musicList = musicList
     }
-
+    
+    func setLoading(_ isLoading: Bool) {
+        isLoadingValues.append(isLoading)
+    }
+    
+    
 }
