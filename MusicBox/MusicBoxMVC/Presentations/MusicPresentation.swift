@@ -5,8 +5,7 @@
 //  Created by Gizem Boskan on 21.10.2021.
 //
 
-import Foundation
-import MusicBoxAPI
+import UIKit
 
 final class MusicPresentation: NSObject {
     
@@ -18,11 +17,10 @@ final class MusicPresentation: NSObject {
         self.detail = detail
         super.init()
     }
-}
-
-extension MusicPresentation {
-    
-    convenience init(music: Music) {
-        self.init(title: music.name, detail: music.artistName)
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? MusicPresentation else { return false }
+        return self.title == other.title && self.detail == other.detail
     }
 }
+
+

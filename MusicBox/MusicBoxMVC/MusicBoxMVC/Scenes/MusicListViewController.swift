@@ -43,6 +43,7 @@ final class MusicListViewController: UIViewController {
 }
 
 extension MusicListViewController: MusicListViewDelegate {
+    
     func didSelectMusic(at index: Int) {
         let music = musicList[index]
         let musicDetailViewController = MusicDetailBuilder.make(with: music)

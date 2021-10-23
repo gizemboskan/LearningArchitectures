@@ -1,20 +1,9 @@
 //
-//  MusicDetailPresentation.swift
-//  MusicBoxMVVM
-//
-//  Created by Gizem Boskan on 22.10.2021.
-//
+//  MusicDetailPresentation+APO.swift
+
 
 import Foundation
 import MusicBoxAPI
-
-struct MusicDetailPresentation {
-    let title: String
-    let artistName: String
-    let genre: String
-    
-}
-
 
 extension MusicDetailPresentation {
     
@@ -22,4 +11,3 @@ extension MusicDetailPresentation {
         self.init(title: music.name, artistName: music.artistName, genre: music.genres.map({ $0.name.rawValue}).joined(separator: ", "))
     }
 }
-

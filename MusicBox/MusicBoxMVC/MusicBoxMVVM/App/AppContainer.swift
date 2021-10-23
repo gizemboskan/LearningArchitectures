@@ -8,9 +8,9 @@
 import Foundation
 import MusicBoxAPI
 
-let app = AppContainer()
+public let app = AppContainer()
 
-final class AppContainer {
+public final class AppContainer {
     
     let router = AppRouter()
     let service = TopMusicsService() 

@@ -7,6 +7,11 @@
 
 import Foundation
 
-protocol MusicDetailViewProtocol {
-    func updateMusicDetail(_ musicDetail: MusicDetailPresentation)
+protocol MusicDetailViewModelDelegate: AnyObject {
+    func showDetail(_ musicDetail: MusicDetailPresentation)
+}
+
+protocol MusicDetailViewModelProtocol {
+    var delegate: MusicDetailViewModelDelegate? { get set }
+    func load()
 }
