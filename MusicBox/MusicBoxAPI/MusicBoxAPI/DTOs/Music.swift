@@ -7,13 +7,13 @@
 
 import Foundation
 
+// MARK: - Music
 public struct Music: Decodable, Equatable {
     
     public enum CodingKeys: String, CodingKey {
         case artistName
         case releaseDate
         case name
-        // case copyright
         case image = "artworkUrl100"
         case genres
     }
@@ -21,20 +21,23 @@ public struct Music: Decodable, Equatable {
     public let artistName: String
     public let releaseDate: String
     public let name: String
-    //  public let copyright: String?
     public let image: String
     public let genres: [Genre]
 }
 
+// MARK: - Genre
 public struct Genre: Decodable, Equatable {
     public let name: Name
 }
 
-public enum Name: String, Codable {
+// MARK: - Name
+public enum Name: String, Decodable {
     case alternative = "Alternative"
     case childrenSMusic = "Children's Music"
     case country = "Country"
     case hipHopRap = "Hip-Hop/Rap"
     case music = "Music"
     case pop = "Pop"
+    case rBSoul = "R&B/Soul"
+    case soundtrack = "Soundtrack"
 }
