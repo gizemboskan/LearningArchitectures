@@ -21,9 +21,4 @@ extension MusicDetailView: MusicDetailViewProtocol {
         artistNameLabel.text = musicDetail.artistName
         genreLabel.text = musicDetail.genre
     }
-    
-    
-
-        
-   
 }

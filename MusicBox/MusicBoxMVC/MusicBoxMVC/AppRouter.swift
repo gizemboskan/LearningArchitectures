@@ -16,6 +16,5 @@ final class AppRouter {
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        
     }
 }

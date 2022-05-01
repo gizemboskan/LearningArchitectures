@@ -13,7 +13,7 @@ final class MusicListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     var viewModel: MusicListViewModelProtocol! {
-        didSet{
+        didSet {
             viewModel.delegate = self
         }
     }
@@ -28,6 +28,7 @@ final class MusicListViewController: UIViewController {
     }
 }
 
+// MARK: - MusicListViewModelDelegate
 extension MusicListViewController: MusicListViewModelDelegate {
     func navigate(to route: MusicListViewRoute) {
         switch route {
@@ -36,7 +37,6 @@ extension MusicListViewController: MusicListViewModelDelegate {
             show(viewController, sender: nil)
         }
     }
-    
     
     func handleViewModelOuput(_ output: MusicListViewModelOutput) {
         switch output {
@@ -48,9 +48,10 @@ extension MusicListViewController: MusicListViewModelDelegate {
             self.musicList = musicList
             tableView.reloadData()
         }
-        
     }
 }
+
+// MARK: - UITableViewDataSource
 extension MusicListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,10 +65,9 @@ extension MusicListViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = music.detail
         return cell
     }
-    
-    
 }
 
+// MARK: - UITableViewDelegate
 extension MusicListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

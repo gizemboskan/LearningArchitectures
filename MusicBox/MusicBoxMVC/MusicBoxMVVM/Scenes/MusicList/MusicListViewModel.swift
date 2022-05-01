@@ -27,8 +27,8 @@ final class MusicListViewModel: MusicListViewModelProtocol {
             self.notify(.setLoading(false))
             switch result {
             case .success(let response):
-                let musics = response.results
-                let presentations = musics.map({ MusicPresentation(music: $0) })
+                self.musics = response.results
+                let presentations = self.musics.map({ MusicPresentation(music: $0) })
                 self.notify(.showMusicList(presentations))
             case .failure(let error):
                 print(error)
@@ -45,5 +45,4 @@ final class MusicListViewModel: MusicListViewModelProtocol {
     private func notify(_ output: MusicListViewModelOutput) {
         delegate?.handleViewModelOuput(output)
     }
-    
 }

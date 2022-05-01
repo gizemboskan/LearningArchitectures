@@ -11,13 +11,14 @@ final class MusicListView: UIView {
     
     weak var delegate: MusicListViewDelegate?
     private var musicList: [MusicPresentation] = []
-    @IBOutlet private weak var tableView: UITableView!
-    
+    @IBOutlet private weak var tableView: UITableView! 
 }
 
+// MARK: - MusicListViewProtocol
 extension MusicListView: MusicListViewProtocol {
     
     func updateMusicList(_ musicList: [MusicPresentation]) {
+        
         self.musicList = musicList
         tableView.reloadData()
     }
@@ -27,6 +28,7 @@ extension MusicListView: MusicListViewProtocol {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension MusicListView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,10 +42,9 @@ extension MusicListView: UITableViewDataSource {
         cell.detailTextLabel?.text = music.detail
         return cell
     }
-    
-    
 }
 
+// MARK: - UITableViewDelegate
 extension MusicListView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

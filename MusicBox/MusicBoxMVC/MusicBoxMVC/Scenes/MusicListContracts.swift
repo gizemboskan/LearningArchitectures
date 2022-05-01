@@ -16,4 +16,3 @@ import Foundation
 @objc protocol MusicListViewDelegate: AnyObject {
     func didSelectMusic(at index: Int)
 }
-

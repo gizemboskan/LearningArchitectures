@@ -81,11 +81,9 @@ class MusicBoxMVVMTests: XCTestCase {
                 detailRouteCalled = true
             }
         }
-        
-        
+
         func handleViewModelOuput(_ output: MusicListViewModelOutput) {
             outputs.append(output)
         }
     }
 }
-

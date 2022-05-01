@@ -7,6 +7,7 @@
 
 import UIKit
 import MusicBoxAPI
+
 public final class MusicDetailBuilder {
     
     static func make(with music: Music) ->

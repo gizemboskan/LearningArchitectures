@@ -19,7 +19,4 @@ final class MusicDetailViewModel: MusicDetailViewModelProtocol{
     func load() {
         delegate?.showDetail(presentation)
     }
-    
-    
-    
 }

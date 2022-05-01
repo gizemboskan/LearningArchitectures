@@ -11,8 +11,4 @@ struct MusicDetailPresentation: Equatable {
     let title: String
     let artistName: String
     let genre: String
-    
 }
-
-
-

@@ -12,7 +12,6 @@ protocol MusicListViewModelProtocol {
     var delegate: MusicListViewModelDelegate? {get set}
     func load()
     func selectMusicPath(at index: Int)
-    
 }
 
 enum MusicListViewModelOutput: Equatable {
@@ -25,10 +24,7 @@ enum MusicListViewRoute {
     case detail(MusicDetailViewModelProtocol)
 }
 
-
-
 protocol MusicListViewModelDelegate {
     func handleViewModelOuput(_ output: MusicListViewModelOutput)
     func navigate(to route: MusicListViewRoute)
 }
-

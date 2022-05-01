@@ -7,6 +7,7 @@
 
 import UIKit
 import MusicBoxAPI
+
 final class MusicDetailViewController: UIViewController {
     
     @IBOutlet weak var customView: MusicDetailView!
@@ -16,7 +17,4 @@ final class MusicDetailViewController: UIViewController {
         super.viewDidLoad()
         customView.updateMusicDetail(MusicDetailPresentation(music: music))
     }
-    
-    
-    
 }

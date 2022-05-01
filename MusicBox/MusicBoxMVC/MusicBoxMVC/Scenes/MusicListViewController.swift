@@ -12,7 +12,7 @@ final class MusicListViewController: UIViewController {
     
     @IBOutlet weak var customView: MusicListViewProtocol! {
         didSet {
-            customView.delegate = self 
+            customView.delegate = self
         }
     }
     
@@ -39,9 +39,9 @@ final class MusicListViewController: UIViewController {
             self.customView.setLoading(false)
         }
     }
-    
 }
 
+// MARK: - MusicListViewDelegate
 extension MusicListViewController: MusicListViewDelegate {
     
     func didSelectMusic(at index: Int) {

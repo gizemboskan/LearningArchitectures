@@ -23,7 +23,6 @@ class MusicBoxMVCTests: XCTestCase {
         
         controller.customView = view
         controller.service = service
-        
     }
     
     func testMusicList() {
@@ -36,12 +35,8 @@ class MusicBoxMVCTests: XCTestCase {
         XCTAssertEqual(view.isLoadingValues, [true, false])
         XCTAssertEqual(view.musicList?.count, 1)
         XCTAssertEqual( try view.musicList?.element(at: 0).title, music1.name)
-        
     }
-    
 }
-
-
 
 private final class MockMusicListView: MusicListViewProtocol {
     
@@ -56,6 +51,4 @@ private final class MockMusicListView: MusicListViewProtocol {
     func setLoading(_ isLoading: Bool) {
         isLoadingValues.append(isLoading)
     }
-    
-    
 }
