@@ -31,7 +31,7 @@ public struct Genre: Decodable, Equatable {
 }
 
 // MARK: - Name
-public enum Name: String, Decodable {
+public enum Name: String, Decodable, Equatable {
     case alternative = "Alternative"
     case childrenSMusic = "Children's Music"
     case country = "Country"
